@@ -32,6 +32,12 @@ docker run --ulimit nofile=66000:66000 -d \
   artlov/docker-telegraf-influxdb-grafana:latest
 ```
 
+For Windows Powershell:
+
+```sh
+docker run --ulimit nofile=66000:66000 -d --name docker-telegraf-influxdb-grafana -p 3003:3003 -p 3004:3004 -p 8086:8086 -p 22022:22 -p 8125:8125/udp -v /path/for/influxdb:/var/lib/influxdb -v /path/for/grafana:/var/lib/grafana artlov/docker-telegraf-influxdb-grafana:latest
+```
+
 You can replace `latest` with the desired version listed in changelog file.
 
 To stop the container launch:
